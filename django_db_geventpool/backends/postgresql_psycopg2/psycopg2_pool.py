@@ -83,7 +83,7 @@ class PostgresConnectionPool(DatabaseConnectionPool):
     def create_connection(self):
         conn = self.connect(*self.args, **self.kwargs)
         # set correct encoding
-        conn.set_client_encoding('UTF8')
+        # conn.set_client_encoding('UTF8')
         return conn
 
     def check_usable(self, connection):
