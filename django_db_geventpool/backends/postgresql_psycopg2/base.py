@@ -10,16 +10,16 @@ except ImportError:
     from eventlet.semaphore import Semaphore
 
 try:
-    from django.db.backends.postgresql_psycopg2.base import CursorWrapper
+    from django.db.backends.postgresql.base import CursorWrapper
 except ImportError:
     pass
 
 import django
-from django.db.backends.postgresql_psycopg2.base import \
+from django.db.backends.postgresql.base import \
     DatabaseWrapper as OriginalDatabaseWrapper
 from django.db.backends.signals import connection_created
 from django.conf import settings
-from django.db.backends.postgresql_psycopg2.base import utc_tzinfo_factory
+from django.db.backends.postgresql.base import utc_tzinfo_factory
 from django.utils.encoding import force_str
 
 try:

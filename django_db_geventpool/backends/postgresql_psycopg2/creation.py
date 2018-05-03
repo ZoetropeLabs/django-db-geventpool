@@ -2,7 +2,7 @@
 
 import django
 
-from django.db.backends.postgresql_psycopg2.creation import DatabaseCreation as OriginalDatabaseCreation
+from django.db.backends.postgresql.creation import DatabaseCreation as OriginalDatabaseCreation
 
 
 class DatabaseCreationMixin16(object):
